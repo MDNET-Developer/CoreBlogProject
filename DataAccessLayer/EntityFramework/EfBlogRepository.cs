@@ -16,7 +16,7 @@ namespace DataAccessLayer.EntityFramework
         public List<Blog> GetListWithCategory()
         {
             using var c = new Context();            
-            return c.Blogs.Include(x => x.Category).ToList();            
+            return c.Blogs.Include(x => x.Category).Include(x=>x.Writer).ToList();            
         }
     }
 }

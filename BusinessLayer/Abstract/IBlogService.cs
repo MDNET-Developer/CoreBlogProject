@@ -10,6 +10,7 @@ namespace BusinessLayer.Abstract
     public interface IBlogService:IGenericService<Blog>
     {
         List<Blog> GetListWithCategory();
+        List<Blog> GetLast5Blogs(int id);
         
     }
 }

@@ -5,6 +5,7 @@
     Layout = "~/Views/Shared/_MainView.cshtml";
 }
 
+
 @foreach (var x in Model)
 {
     <div class="col-lg-4 card">
@@ -35,8 +36,9 @@
             <h5 class="card-title">
                 <a href="/Default/BlogDetails/@x.BlogID/">@x.BlogTitle</a>
             </h5>
+            <strong><img src="https://i.hizliresim.com/p2qnib0.png"/> @x.Writer.WriterName</strong>
             <p class="card-text mb-3">@x.BlogContent.Substring(0,x.BlogContent.Substring(0,110).LastIndexOf(" "))... </p>
-            <a href="/Default/BlogDetails/@x.BlogID/" class="btn btn-primary read-m">Etrafli</a>
+            <a href="/Default/BlogDetails/@x.BlogID/" class="btn btn-primary read-m">Ətraflı → </a>
         </div>
 
 
