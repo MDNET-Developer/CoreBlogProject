@@ -110,7 +110,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="contact.html">Əlaqə</a>
+							<a class="nav-link" href="/Contact/Index/">Əlaqə</a>
 						</li>
 
 					</ul>
@@ -134,15 +134,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!--/main-->
 	<section class="main-content-w3layouts-agileits">
 		<div class="container">
-			<div class="inner-sec">
-				<!--left-->
-				<div class="left-blog-info-w3layouts-agileits text-left">
 					<div class="row">
 						@RenderBody()
 					</div>
-					<!--//left-->
-				</div>
-			</div>
 		</div>
 	</section>
 	<!--//main-->
@@ -159,66 +153,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<div class="col-lg-4 footer-grid-agileits-w3ls text-left">
 
-					<div class="tech-btm">
-						<h3>Latest Posts</h3>
-						<div class="blog-grids row mb-3">
-							<div class="col-md-5 blog-grid-left">
-								<a href="single.html">
-									<img src="images/4.jpg" class="card-img-top img-fluid" alt="">
-								</a>
-							</div>
-							<div class="col-md-7 blog-grid-right">
-
-								<h5>
-									<a href="single.html">Pellentesque dui, non felis. Maecenas male non felis </a>
-								</h5>
-								<div class="sub-meta">
-									<span>
-										<i class="far fa-clock"></i> 20 Jan, 2018
-									</span>
-								</div>
-							</div>
-
-						</div>
-						<div class="blog-grids row mb-3">
-							<div class="col-md-5 blog-grid-left">
-								<a href="single.html">
-									<img src="images/5.jpg" class="card-img-top img-fluid" alt="">
-								</a>
-							</div>
-							<div class="col-md-7 blog-grid-right">
-
-								<h5>
-									<a href="single.html">Pellentesque dui, non felis. Maecenas male non felis </a>
-								</h5>
-								<div class="sub-meta">
-									<span>
-										<i class="far fa-clock"></i> 20 Jan, 2018
-									</span>
-								</div>
-							</div>
-
-						</div>
-						<div class="blog-grids row mb-3">
-							<div class="col-md-5 blog-grid-left">
-								<a href="single.html">
-									<img src="images/6.jpg" class="card-img-top img-fluid" alt="">
-								</a>
-							</div>
-							<div class="col-md-7 blog-grid-right">
-
-								<h5>
-									<a href="single.html">Pellentesque dui, non felis. Maecenas male non felis </a>
-								</h5>
-								<div class="sub-meta">
-									<span>
-										<i class="far fa-clock"></i> 20 Jan, 2018
-									</span>
-								</div>
-							</div>
-
-						</div>
-					</div>
+		@await Component.InvokeAsync("Last3PostFooterList")
 				</div>
 				<!-- subscribe -->
 				<div class="col-lg-4 subscribe-main footer-grid-agileits-w3ls text-left">

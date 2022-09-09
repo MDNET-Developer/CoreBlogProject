@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_MainView.cshtml";
+}
+
+
+@using(Html.BeginForm("Index", "Contact",FormMethod.Post))
+{
+    	<section class="main-content-w3layouts-agileits">
+
+		<h3 class="tittle">Bizimlə əlaqə</h3>
+		<p class="sub text-center">Təklif və ya iradlarınız olsa bizimlə əlaqə saxlaya bilərsiniz</p>
+		<hr>
+		<div class="container">
+			<div class="contact_grid_right">
+				<form action="#" method="post">
+					<div class="row contact_left_grid">
+						<div class="col-md-6 con-left">
+							<div class="form-group">
+								<label for="validationCustom01 my-2">Adınız</label>
+								<input class="form-control" type="text" name="ContactUserName" placeholder="" required="">
+							</div>
+							<div class="form-group">
+								<label for="exampleFormControlInput1">E-poçt</label>
+								<input class="form-control" type="email" name="ContactMail" placeholder="" required="">
+							</div>
+							<div class="form-group">
+								<label for="validationCustom03 my-2">Mövzu</label>
+								<input class="form-control" type="text" name="ContactSubject" placeholder="" required="">
+							</div>
+						</div>
+						<div class="col-md-6 con-right">
+							<div class="form-group">
+								<label for="textarea">Mesajınız</label>
+								<textarea name="ContactMessage" id="textarea" placeholder=""></textarea>
+							</div>
+							<button class="btn btn-primary">Göndər</button>
+
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+}

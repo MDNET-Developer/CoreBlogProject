@@ -16,9 +16,12 @@ namespace Core_Bloq_Kamp.Controllers
         }
         public IActionResult BlogDetails(int id)
         {
+            
             ViewBag.getid = id;
             var values = blogManager.GetBlogByID(id);
             return View(values);
         }
+
+
     }
 }
