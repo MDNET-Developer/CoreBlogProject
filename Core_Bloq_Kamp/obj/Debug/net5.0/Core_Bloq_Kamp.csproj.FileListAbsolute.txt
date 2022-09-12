@@ -327,3 +327,4 @@ C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\obj\Debug\net5.0\Razor\Vi
 C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\obj\Debug\net5.0\Razor\Views\Error\Error404.cshtml.g.cs
 C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\obj\Debug\net5.0\Razor\Views\Contact\Index.cshtml.g.cs
 C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\obj\Debug\net5.0\Razor\Views\Shared\Components\Last3PostFooterList\Default.cshtml.g.cs
+C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\obj\Debug\net5.0\Razor\Views\Test\Index.cshtml.g.cs

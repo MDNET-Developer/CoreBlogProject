@@ -3,12 +3,15 @@ using BusinessLayer.ValidationRules.WriterValidator;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using FluentValidation.Results;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Core_Bloq_Kamp.Controllers
 {
+    [AllowAnonymous]
     public class RegisterController : Controller
     {
+       
         WriterManager writerManager = new  WriterManager(new EfWriterRepository());
         [HttpGet]
         public IActionResult Index()
@@ -24,7 +27,7 @@ namespace Core_Bloq_Kamp.Controllers
             {
                 w.WriterStatus = true;
                 writerManager.TAdd(w);
-                return RedirectToAction("Login","Index");
+                return RedirectToAction("Index","Login");
             }
             else
             {
