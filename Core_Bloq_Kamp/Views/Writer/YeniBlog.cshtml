@@ -1,0 +1,26 @@
+﻿@model EntityLayer.Concrete.Blog
+@{
+    ViewData["Title"] = "YeniBlog";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
+}
+
+<h2>YeniBlog</h2>
+<hr />
+@using (Html.BeginForm("YeniBlog", "Writer", FormMethod.Post))
+{
+<h4>Bloq başlıq</h4>
+@Html.TextBoxFor(x=>x.BlogTitle ,new{@class="form-control"})
+<p class="text-danger">@Html.ValidationMessageFor(x=>x.BlogTitle)</p>
+<br />
+<h4>Bloq Foto</h4>
+@Html.TextBoxFor(x=>x.BlogImage ,new{@class="form-control"})
+<br />
+<h4>Bloq kateqoriya</h4>
+@Html.TextBoxFor(x=>x.CategoryID ,new{@class="form-control"})
+<br />
+<h4>Bloq məzmun</h4>
+@Html.TextBoxFor(x=>x.BlogContent ,new{@class="form-control"})
+<p class="text-danger">@Html.ValidationMessageFor(x=>x.BlogContent)</p>
+<br />
+<button href="#" class="hvr-icon-float-away">Təsdiqlə</button>
+}

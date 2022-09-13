@@ -1,0 +1,40 @@
+﻿@using EntityLayer.Concrete
+@model List<Blog>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
+}
+<div style="display:flex; align-content:space-between">
+<h2>Bloglar</h2><a href="/Writer/YeniBlog/" class="hvr-curl-top-left">Yeni Bloq</a>
+</div>
+
+<hr />
+<table class="table table-bordered">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Blog başlığı</th>
+      <th scope="col">Məzmun</th>
+      <th scope="col">Tarix</th>
+      <th scope="col">Kateqoriya</th>
+      <th scope="col">Yenilə</th>
+      <th scope="col">Sil</th>
+    </tr>
+  </thead>
+  <tbody>
+      @foreach (var item in Model)
+        {
+              <tr>
+      <th scope="row">@item.BlogID</th>
+      <td>@item.BlogTitle</td>
+      <td>@item.BlogContent.Substring(0,20)...</td>
+       <td>@(((DateTime)item.BlogCreateDate).ToString("dddd, dd MMMM yyyy"))</td>
+      <td>@item.CategoryID</td>
+        <td><button class="btn btn-warning">Yenilə</button></td>
+          <td><a href="/Writer/DeleteBlog/@item.BlogID" class="btn btn-danger">Sil</a></td>
+    </tr>  
+        }
+
+  </tbody>
+</table>
+
