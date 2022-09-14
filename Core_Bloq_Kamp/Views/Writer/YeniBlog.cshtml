@@ -16,7 +16,7 @@
 @Html.TextBoxFor(x=>x.BlogImage ,new{@class="form-control"})
 <br />
 <h4>Bloq kateqoriya</h4>
-@Html.TextBoxFor(x=>x.CategoryID ,new{@class="form-control"})
+@Html.DropDownListFor(x=>x.CategoryID,(List<SelectListItem>)ViewBag.categorylist ,new{@class="form-control"})
 <br />
 <h4>Bloq məzmun</h4>
 @Html.TextBoxFor(x=>x.BlogContent ,new{@class="form-control"})

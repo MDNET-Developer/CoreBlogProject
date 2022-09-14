@@ -5,7 +5,10 @@ using EntityLayer.Concrete;
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Core_Bloq_Kamp.Controllers
 {
@@ -22,6 +25,16 @@ namespace Core_Bloq_Kamp.Controllers
         [HttpGet]
         public IActionResult YeniBlog()
         {
+            CategoryManager CM = new CategoryManager(new EfCategoryRepository());
+            List<SelectListItem> categorylist = (from x in CM.TGetList()
+                                                 select new SelectListItem
+                                                 {
+                                                     Text=x.CategoryName,
+                                                     Value=x.CategoryID.ToString()
+                                                 }
+                                                 ).ToList();
+            ViewBag.CategoryList = categorylist;
+           
             return View();
         }
         [HttpPost]
