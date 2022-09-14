@@ -19,7 +19,7 @@ namespace Core_Bloq_Kamp.Controllers
         BlogManager blogManager = new BlogManager(new EfBlogRepository());
         public IActionResult Index()
         {
-            var bloqlar = blogManager.GetBlogListByWriter(1);
+            var bloqlar = blogManager.GetListWithCategoryByWriter(1);
             return View(bloqlar);
         }
         [HttpGet]
@@ -68,6 +68,31 @@ namespace Core_Bloq_Kamp.Controllers
             var getid = blogManager.GetByID(id);
             blogManager.TDelete(getid);
             return RedirectToAction("Index","Writer");
+        }
+
+        //Yenileme kodlari
+        [HttpGet]
+        public IActionResult BlogEdit(int id)
+        {
+            CategoryManager CM = new CategoryManager(new EfCategoryRepository());
+            List<SelectListItem> categorylist = (from x in CM.TGetList()
+                                                 select new SelectListItem
+                                                 {
+                                                     Text = x.CategoryName,
+                                                     Value = x.CategoryID.ToString()
+                                                 }
+                                                 ).ToList();
+            ViewBag.CategoryList = categorylist;
+            var element = blogManager.GetByID(id);
+            return View(element);
+        }
+        [HttpPost]
+        public IActionResult BlogEdit(Blog b)
+        {
+            b.WriterID = 1;
+            b.BlogStatus = true;
+            blogManager.TUpdate(b);
+            return RedirectToAction("Index", "Writer");
         }
     }
 }

@@ -17,6 +17,7 @@
       <th scope="col">Məzmun</th>
       <th scope="col">Tarix</th>
       <th scope="col">Kateqoriya</th>
+      <th scope="col">Vəziyyət</th>
       <th scope="col">Yenilə</th>
       <th scope="col">Sil</th>
     </tr>
@@ -29,8 +30,17 @@
       <td>@item.BlogTitle</td>
       <td>@item.BlogContent.Substring(0,20)...</td>
        <td>@(((DateTime)item.BlogCreateDate).ToString("dddd, dd MMMM yyyy"))</td>
-      <td>@item.CategoryID</td>
-      <td><button class="btn btn-warning">Yenilə</button></td>
+      <td>@item.Category.CategoryName</td>
+      <td>@if(item.Category.CategoryStatus==true)
+                    {
+                        <span style="color:#A3CB38">Aktiv ✔</span>
+                    }
+                    else
+                    {
+                        <span style="color:red">Passiv ✖</span>
+                    }
+                </td>
+      <td><a href="/Writer/BlogEdit/@item.BlogID" class="btn btn-warning">Yenilə</a></td>
        <td><a href="/Writer/DeleteBlog/@item.BlogID" class="btn btn-danger">Sil</a></td>
     </tr>  
         }

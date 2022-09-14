@@ -331,3 +331,4 @@ C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\obj\Debug\net5.0\Razor\Vi
 C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\obj\Debug\net5.0\Razor\Views\Shared\_WriterLayout.cshtml.g.cs
 C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\obj\Debug\net5.0\Razor\Views\Writer\Index.cshtml.g.cs
 C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\obj\Debug\net5.0\Razor\Views\Writer\YeniBlog.cshtml.g.cs
+C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\obj\Debug\net5.0\Razor\Views\Writer\BlogEdit.cshtml.g.cs
