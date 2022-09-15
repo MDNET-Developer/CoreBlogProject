@@ -1,0 +1,19 @@
+﻿@using EntityLayer.Concrete
+@model List<Writer>
+
+<div class="user-marorm">
+    @foreach (var item in Model)
+    {
+        <div class="malorm-bottom">
+            <div style="display:flex;justify-content:center">
+                <img style="height:2cm;width:2cm;border-radius:100%;" src="@item.WriterImage" />
+            </div>
+
+            <h2>@item.WriterName</h2>
+            <p>@item.WriterAbout</p>
+
+        </div>
+    }
+
+
+</div>
