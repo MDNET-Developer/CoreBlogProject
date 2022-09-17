@@ -94,5 +94,13 @@ namespace Core_Bloq_Kamp.Controllers
             blogManager.TUpdate(b);
             return RedirectToAction("Index", "Writer");
         }
+
+
+        public IActionResult WriterInfo()
+        {
+            WriterManager writerManager = new WriterManager(new EfWriterRepository());
+            var userinfo = writerManager.GetByID(1);
+            return View(userinfo);
+        }
     }
 }

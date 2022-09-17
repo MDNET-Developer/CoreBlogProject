@@ -1,0 +1,16 @@
+﻿@using EntityLayer.Concrete
+@model List<Writer>
+
+<div class="profile_img">
+    @foreach (var item in Model)
+    {
+        <span  class="prfil-img"><img style="height:1.5cm; width:1.5cm ; border-radius:100%" src="@item.WriterImage" alt=""> </span>
+    <div class="user-name">
+        <p>@item.WriterName</p>
+        <span>@item.WriterMail</span>
+    </div>  
+    }
+    <i class="fa fa-angle-down lnr"></i>
+    <i class="fa fa-angle-up lnr"></i>
+    <div class="clearfix"></div>
+</div>

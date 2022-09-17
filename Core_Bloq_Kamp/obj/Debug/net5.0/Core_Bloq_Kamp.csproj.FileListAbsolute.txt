@@ -334,3 +334,6 @@ C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\obj\Debug\net5.0\Razor\Vi
 C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\obj\Debug\net5.0\Razor\Views\Writer\BlogEdit.cshtml.g.cs
 C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\obj\Debug\net5.0\Razor\Views\Dashboard\Index.cshtml.g.cs
 C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\obj\Debug\net5.0\Razor\Views\Shared\Components\GetWriterInfoOnDashboard\Default.cshtml.g.cs
+C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\obj\Debug\net5.0\Razor\Views\Shared\Components\NotifcationList\Default.cshtml.g.cs
+C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\obj\Debug\net5.0\Razor\Views\Shared\Components\GetWriterOnHeader\Default.cshtml.g.cs
+C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\obj\Debug\net5.0\Razor\Views\Writer\WriterInfo.cshtml.g.cs

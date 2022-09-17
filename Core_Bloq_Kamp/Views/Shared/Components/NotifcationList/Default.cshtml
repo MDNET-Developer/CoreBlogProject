@@ -1,0 +1,30 @@
+﻿@using EntityLayer.Concrete
+@model List<Notifcation>
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-bell"></i><span class="badge blue">@ViewBag.v1</span></a>
+<ul class="dropdown-menu">
+    <li>
+        <div class="notification_header">
+            <h3>Sizin  @ViewBag.v1 yeni bilrisişiniz var</h3>
+        </div>
+    </li>
+    @foreach (var item in Model)
+    {
+        <li>
+            <a href="#">
+                <div class="user_img"><img style="width:1cm;height:auto" src="https://i.hizliresim.com/dzakoic.png" alt=""></div>
+                <div style="margin-left:-1cm" class="notification_desc">
+                    <p>@item.NotifcationType</p>
+                    <p>@item.NotifcationDetails</p>
+                    <p><span>@(((DateTime)item.NotifcationDateTime).ToString("MM/dd/yyyy"))</span></p>
+                </div>
+                <div class="clearfix"></div>
+            </a>
+        </li>
+    }
+
+    <li>
+        <div class="notification_bottom">
+            <a href="#">Bütün bildirişləri gör</a>
+        </div>
+    </li>
+</ul>

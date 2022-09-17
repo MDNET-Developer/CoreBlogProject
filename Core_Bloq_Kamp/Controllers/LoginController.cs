@@ -40,7 +40,7 @@ namespace Core_Bloq_Kamp.Controllers
                 ClaimsPrincipal principal = new ClaimsPrincipal(useridentity);
                 //kuki yaratmaq ucun gelen istifadeci formatini
                 await HttpContext.SignInAsync(principal);
-                return RedirectToAction("Index","Test");
+                return RedirectToAction("Index","Default");
             }
            else
            {

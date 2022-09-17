@@ -1,0 +1,26 @@
+﻿@model EntityLayer.Concrete.Writer
+@{
+    ViewData["Title"] = "WriterInfo";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
+}
+
+<h2>İstifadəçi məlumatları</h2>
+<hr />
+@using(Html.BeginForm("WriterInfo","Writer",FormMethod.Post))
+{
+    @Html.HiddenFor(x=>x.WriterID)
+    <h4>İstifadəçi adı</h4>
+    @Html.TextBoxFor(x=>x.WriterName, new{@class="form-control"})
+    <br />
+    <h4>İstifadəçi e-poçt</h4>
+    @Html.TextBoxFor(x=>x.WriterMail, new{@class="form-control"})
+    <br />
+      <h4>İstifadəçi foto</h4><span><img  style="width:1.5cm; height:1.5cm;border-radius:100%"src="@Model.WriterImage"/></span> 
+    @Html.TextBoxFor(x=>x.WriterImage, new{@class="form-control"})
+    <br />
+      <h4>İstifadəçi haqqında</h4>
+    @Html.TextAreaFor(x=>x.WriterAbout,10,4, new{@class="form-control"})
+    <br />
+    <button style="font-size:18px;border:1px solid #7f8c8d" class=" btn hvr-shutter-out-horizontal">Yenilə</button>
+     <br />
+}
