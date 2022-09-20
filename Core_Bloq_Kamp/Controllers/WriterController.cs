@@ -95,12 +95,21 @@ namespace Core_Bloq_Kamp.Controllers
             return RedirectToAction("Index", "Writer");
         }
 
-
+        [HttpGet]
+        [AllowAnonymous]
         public IActionResult WriterInfo()
         {
             WriterManager writerManager = new WriterManager(new EfWriterRepository());
             var userinfo = writerManager.GetByID(1);
             return View(userinfo);
+        }
+        [HttpPost]
+        [AllowAnonymous]
+        public IActionResult WriterInfo(Writer p)
+        {
+            WriterManager writerManager = new WriterManager(new EfWriterRepository());
+            writerManager.TUpdate(p);
+            return View();
         }
     }
 }
