@@ -1,0 +1,22 @@
+﻿@using EntityLayer.Concrete
+@model List<Message>
+
+
+<div class="content" style="overflow: scroll;">
+    @foreach (var x in Model)
+    {
+        <div class="text">
+            <div class="text-right">
+                <div><h4><a href="#">@x.Subject </a></h4></div>
+                <div class="tarix">
+                    <label> @(((DateTime)x.MessageDateTime).ToString("dddd, dd MMMM yyyy")) </label>
+                </div>
+                <div class="clear"> </div>
+                <h6> @x.Sender</h6>
+            </div>
+            <div class="clear"> </div>
+            <div><a class="btn btn-danger" href="#">Sil</a></div>
+        </div>
+    }
+       
+</div>

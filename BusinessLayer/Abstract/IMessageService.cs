@@ -10,5 +10,7 @@ namespace BusinessLayer.Abstract
     public interface IMessageService:IGenericService<Message>
     {
         List<Message> GetListMessageByWriter(string p);
+        List<Message> GetListInboxMessage(string p);
+        List<Message> GetListDeletedMessage(string p);
     }
 }

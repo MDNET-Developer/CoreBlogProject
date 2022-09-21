@@ -3,4 +3,69 @@
     Layout = "~/Views/Shared/_WriterLayout.cshtml";
 }
 
-<h1>Mesajlar</h1>
+<head>
+    <title>Personal Mail Widget template Flat Responsive Widget Template :: w3layouts</title>
+    <!--Custom Theme files-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Personal Mail Widget template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //Custom Theme files -->
+    <link href="~/Inbox/web/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href='//fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
+    <!-- js -->
+    <script src="~/Inbox/web/js/jquery-1.11.1.min.js"></script>
+    <!-- //js -->
+</head>
+
+<div class="row">
+    <div class="account" style="width:70%;">
+        <div class="account-info">
+            @await Component.InvokeAsync("MailAccount")
+            <div class="account-bottom">
+                <div class="tabs">
+                    @await Component.InvokeAsync("MessageNav")
+                    @*Inbox*@
+                    @await Component.InvokeAsync("ReceiveMessage")
+                    @await Component.InvokeAsync("SendMessage")
+                    @await Component.InvokeAsync("DeletedMessage")
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    $(function () {
+        $('.tabs nav a').on('click', function () {
+            show_content($(this).index());
+        });
+
+        show_content(0);
+
+        function show_content(index) {
+            // Make the content visible
+            $('.tabs .content.visible').removeClass('visible');
+            $('.tabs .content:nth-of-type(' + (index + 1) + ')').addClass('visible');
+
+            // Set the tab to selected
+            $('.tabs nav a.selected').removeClass('selected');
+            $('.tabs nav a:nth-of-type(' + (index + 1) + ')').addClass('selected');
+        }
+    });
+</script>
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36251023-1']);
+    _gaq.push(['_setDomainName', 'jqueryscript.net']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>

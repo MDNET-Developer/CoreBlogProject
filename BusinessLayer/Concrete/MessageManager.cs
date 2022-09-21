@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-    internal class MessageManager : IMessageService
+    public class MessageManager : IMessageService
     {
         IMessageDal _messageDal;
 
@@ -25,7 +25,12 @@ namespace BusinessLayer.Concrete
 
         public List<Message> GetListMessageByWriter(string p)
         {
-           return _messageDal.GetListAll(x=>x.Receiver==p);
+           return _messageDal.GetListAll(x=>x.Sender==p).Where(x => x.MessageStatus == true).ToList();
+        }
+
+        public List<Message> GetListInboxMessage(string p)
+        {
+            return _messageDal.GetListAll(x => x.Receiver == p).Where(x=>x.MessageStatus==true).ToList();
         }
 
         public void TAdd(Message t)
@@ -46,6 +51,11 @@ namespace BusinessLayer.Concrete
         public void TUpdate(Message t)
         {
             _messageDal.Update(t);
+        }
+
+        public List<Message> GetListDeletedMessage(string p)
+        {
+          return  _messageDal.GetListAll(x => x.Receiver == p).Where(x => x.MessageStatus == false).ToList();
         }
     }
 }
