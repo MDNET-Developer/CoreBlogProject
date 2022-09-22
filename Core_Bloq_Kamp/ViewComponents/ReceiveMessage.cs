@@ -10,7 +10,8 @@ namespace Core_Bloq_Kamp.ViewComponents
         MessageManager messageManager = new MessageManager(new EfMessageRepository());
         public IViewComponentResult Invoke()
         {
-            var inbox = messageManager.GetListInboxMessage("qarabagli.murad@mail.ru");
+            var usermail = User.Identity.Name;
+            var inbox = messageManager.GetListInboxMessage(usermail);
             return View(inbox);
         }
     }

@@ -11,7 +11,8 @@ namespace Core_Bloq_Kamp.ViewComponents
         MessageManager messageManager = new MessageManager(new EfMessageRepository());
         public IViewComponentResult Invoke()
         {
-            var sendmessage = messageManager.GetListMessageByWriter("qarabagli.murad@mail.ru");
+            var usermail = User.Identity.Name;
+            var sendmessage = messageManager.GetListMessageByWriter(usermail);
             return View(sendmessage);
         }
     }

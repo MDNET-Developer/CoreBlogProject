@@ -12,8 +12,9 @@ namespace Core_Bloq_Kamp.ViewComponents
         public IViewComponentResult Invoke()
         {
             Context c = new Context();
-            ViewBag.gelen = c.Messages.Where(x => x.Receiver == "qarabagli.murad@mail.ru" && x.MessageStatus==true).Count();
-            ViewBag.gonderilen = c.Messages.Where(x => x.Sender == "qarabagli.murad@mail.ru").Count();
+            var usermail = User.Identity.Name;
+            ViewBag.gelen = c.Messages.Where(x => x.Receiver == usermail && x.MessageStatus==true).Count();
+            ViewBag.gonderilen = c.Messages.Where(x => x.Sender == usermail).Count();
             return View();
         }
     }

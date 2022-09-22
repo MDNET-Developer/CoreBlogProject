@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Concrete;
 using BusinessLayer.ValidationRules.BlogValidator;
+using DataAccessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using FluentValidation.Results;
@@ -19,7 +20,9 @@ namespace Core_Bloq_Kamp.Controllers
         BlogManager blogManager = new BlogManager(new EfBlogRepository());
         public IActionResult Index()
         {
-            var bloqlar = blogManager.GetListWithCategoryByWriter(1);
+            Context c = new Context();
+            var userid = c.Writers.Where(x => x.WriterMail == User.Identity.Name).Select(x => x.WriterID).FirstOrDefault();
+            var bloqlar = blogManager.GetListWithCategoryByWriter(userid);
             return View(bloqlar);
         }
         [HttpGet]
@@ -46,7 +49,9 @@ namespace Core_Bloq_Kamp.Controllers
             {
                 b.BlogStatus = true;
                 b.BlogCreateDate = DateTime.Parse(DateTime.Now.ToShortTimeString());
-                b.WriterID =1 ;
+                Context c = new Context();
+                var userid = c.Writers.Where(x => x.WriterMail == User.Identity.Name).Select(x => x.WriterID).FirstOrDefault();
+                b.WriterID = userid;
                 blogManager.TAdd(b);
                 return RedirectToAction("Index", "Writer");
             }
@@ -89,7 +94,9 @@ namespace Core_Bloq_Kamp.Controllers
         [HttpPost]
         public IActionResult BlogEdit(Blog b)
         {
-            b.WriterID = 1;
+            Context c = new Context();
+            var userid = c.Writers.Where(x => x.WriterMail == User.Identity.Name).Select(x => x.WriterID).FirstOrDefault();
+            b.WriterID = userid;
             b.BlogStatus = true;
             blogManager.TUpdate(b);
             return RedirectToAction("Index", "Writer");
@@ -100,7 +107,9 @@ namespace Core_Bloq_Kamp.Controllers
         public IActionResult WriterInfo()
         {
             WriterManager writerManager = new WriterManager(new EfWriterRepository());
-            var userinfo = writerManager.GetByID(1);
+            Context c = new Context();
+            var userid = c.Writers.Where(x => x.WriterMail == User.Identity.Name).Select(x => x.WriterID).FirstOrDefault();
+            var userinfo = writerManager.GetByID(userid);
             return View(userinfo);
         }
         [HttpPost]

@@ -11,7 +11,8 @@ namespace Core_Bloq_Kamp.Controllers
         public IActionResult Index()
         {
             Context db = new Context();
-            ViewBag.blog = db.Blogs.Where(x => x.WriterID == 1).Count();
+            var userid = db.Writers.Where(x => x.WriterMail == User.Identity.Name).Select(x => x.WriterID).FirstOrDefault();
+            ViewBag.blog = db.Blogs.Where(x => x.WriterID == userid).Count();
 
             return View();
         }

@@ -1,7 +1,10 @@
 ﻿using BusinessLayer.Concrete;
+using DataAccessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Linq;
+
 namespace Core_Bloq_Kamp.ViewComponents
 {
     public class MailAccount:ViewComponent
@@ -9,7 +12,9 @@ namespace Core_Bloq_Kamp.ViewComponents
         WriterManager writerManager = new  WriterManager(new EfWriterRepository());
         public IViewComponentResult Invoke()
         {
-            var user = writerManager.GetWriterAccountByID(1);
+            Context c = new Context();
+            var userid = c.Writers.Where(x => x.WriterMail == User.Identity.Name).Select(x => x.WriterID).FirstOrDefault();
+            var user = writerManager.GetWriterAccountByID(userid);
             return View(user);
         }
     }
