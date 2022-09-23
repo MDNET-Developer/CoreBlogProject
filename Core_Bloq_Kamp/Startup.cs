@@ -44,7 +44,7 @@ namespace Core_Bloq_Kamp
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-            
+
             }
             else
             {
@@ -62,9 +62,15 @@ namespace Core_Bloq_Kamp
 
             app.UseEndpoints(endpoints =>
             {
+
+            endpoints.MapControllerRoute(
+            name: "areas",
+            pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+          );
+
                 endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                name: "default",
+                pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

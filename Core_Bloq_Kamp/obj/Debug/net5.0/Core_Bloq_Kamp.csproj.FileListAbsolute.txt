@@ -343,3 +343,9 @@ C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\obj\Debug\net5.0\Razor\Vi
 C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\obj\Debug\net5.0\Razor\Views\Shared\Components\SendMessage\Default.cshtml.g.cs
 C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\obj\Debug\net5.0\Razor\Views\Shared\Components\ReceiveMessage\Default.cshtml.g.cs
 C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\obj\Debug\net5.0\Razor\Views\Shared\Components\DeletedMessage\Default.cshtml.g.cs
+C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\obj\Debug\net5.0\Razor\Views\Shared\_AdminAreaLayout.cshtml.g.cs
+C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\obj\Debug\net5.0\Razor\Areas\Admin\Views\Category\Index.cshtml.g.cs
+C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\bin\Debug\net5.0\JetBrains.Annotations.dll
+C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\bin\Debug\net5.0\X.PagedList.dll
+C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\bin\Debug\net5.0\X.PagedList.Mvc.Core.dll
+C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\obj\Debug\net5.0\Razor\Areas\Admin\Views\Category\YeniKateqoriya.cshtml.g.cs

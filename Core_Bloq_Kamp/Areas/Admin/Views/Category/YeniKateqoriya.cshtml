@@ -1,0 +1,25 @@
+﻿@model EntityLayer.Concrete.Category
+@{
+    ViewData["Title"] = "YeniKateqoriya";
+    Layout = "~/Views/Shared/_AdminAreaLayout.cshtml";
+}
+
+<h2>Yeni Kateqoriya</h2>
+<hr />
+@using (Html.BeginForm("YeniKateqoriya", "Category", FormMethod.Post))
+{
+<h4>Kateqoriya</h4>
+@Html.TextBoxFor(x=>x.CategoryName ,new{@class="form-control"})
+<p class="text-danger">@Html.ValidationMessageFor(x=>x.CategoryName)</p>
+<br />
+<h4>Açıqlama</h4>
+@Html.TextBoxFor(x=>x.CategoryDescription ,new{@class="form-control"})
+<p class="text-danger">@Html.ValidationMessageFor(x=>x.CategoryDescription)</p>
+<br />
+<h4>Vəziyyət</h4>
+@Html.RadioButtonFor(m => m.CategoryStatus,"True")
+@Html.RadioButtonFor(m => m.CategoryStatus,"False")
+<br />
+<button  class="btn btn-succses">Təsdiqlə</button>
+}
+

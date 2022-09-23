@@ -1,0 +1,47 @@
+﻿
+@using X.PagedList;
+@using X.PagedList.Mvc.Core;
+@model IPagedList<EntityLayer.Concrete.Category>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminAreaLayout.cshtml";
+}
+
+<h1>Kateqoriyalar</h1><a class="btn btn-warning" href="/Ctegory/YeniKateqoriya/">Yeni Kateqoriya + </a>
+<hr />
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Kateqoriya</th>
+        <th scope="col">Vəziyyət</th>
+      <th scope="col">Aktiv et</th>
+      <th scope="col">Passiv et</th>
+      <th scope="col">Yenilə</th>
+    </tr>
+  </thead>
+  <tbody>
+      @foreach (var item in Model)
+        {
+              <tr>
+      <th scope="row">@item.CategoryID</th>
+      <td>@item.CategoryName</td>
+      <td>
+                    @if (item.CategoryStatus == true)
+                    {
+                        <strong style="color:green">Aktiv</strong>
+                    }
+                    else{
+                        <strong style="color:red">Passiv</strong>
+                    }
+                </td>
+      <td><a><img src="~/IconsWeb/Aktivet.png"/></a></td>
+      <td><a><img src="~/IconsWeb/Passivet.png"/></a></td>
+      <td><a><img src="~/IconsWeb/Yenile.png"/></a></td>
+    </tr>
+        }
+  
+  </tbody>
+</table>
+<br />
+@Html.PagedListPager((IPagedList)Model ,page=>Url.Action("Index",new {page}))
