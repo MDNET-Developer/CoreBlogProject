@@ -1,0 +1,25 @@
+﻿@using EntityLayer.Concrete
+@model List<Writer>
+@{
+    ViewData["Title"] = "UserFriendBlogs";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
+}
+
+@foreach (var item in Model)
+{
+    <div class="contanier">
+        <div style="display:flex;align-items:center;">
+            <div>
+                <img style="border-radius:100%; width:2cm; height:2cm;margin-right:0.5cm" src="@item.WriterImage" />
+            </div>
+           <div>
+               <h3>@item.WriterName</h3>
+                <p>@item.WriterMail</p>
+           </div>
+        </div>
+        <a  style="margin-top:10px" class="btn btn-warning" href="/Friend/SendMessage/@item.WriterMail">Mesaj göndər</a>
+        <hr/>
+
+        @await Component.InvokeAsync("GetFriendBlogs", new {id=@item.WriterID})
+    </div>
+}

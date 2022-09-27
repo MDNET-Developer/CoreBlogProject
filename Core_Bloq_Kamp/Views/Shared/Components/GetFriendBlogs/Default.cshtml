@@ -1,0 +1,20 @@
+﻿@using EntityLayer.Concrete
+@model List<Blog>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="card col-md-3">
+            <img style="width:7cm; height:auto" class="card-img-top" src="@item.BlogImage" alt="Card image cap">
+            <div class="card-body">
+                <h2 class="card-title">@item.BlogTitle</h2>
+                <p class="card-text">@item.BlogContent.Substring(0,25)...</p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">@item.BlogCreateDate</small>
+            </div>
+            <br/>
+        </div>
+    }
+  
+</div>

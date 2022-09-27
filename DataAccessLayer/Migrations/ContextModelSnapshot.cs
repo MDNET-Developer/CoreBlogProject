@@ -172,6 +172,27 @@ namespace DataAccessLayer.Migrations
                     b.ToTable("Contacts");
                 });
 
+            modelBuilder.Entity("EntityLayer.Concrete.Friend", b =>
+                {
+                    b.Property<int>("DostluqID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Alan")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Gonderen")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Veziyyet")
+                        .HasColumnType("bit");
+
+                    b.HasKey("DostluqID");
+
+                    b.ToTable("Friends");
+                });
+
             modelBuilder.Entity("EntityLayer.Concrete.Message", b =>
                 {
                     b.Property<int>("MessageID")

@@ -349,3 +349,9 @@ C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\bin\Debug\net5.0\JetBrain
 C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\bin\Debug\net5.0\X.PagedList.dll
 C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\bin\Debug\net5.0\X.PagedList.Mvc.Core.dll
 C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\obj\Debug\net5.0\Razor\Areas\Admin\Views\Category\YeniKateqoriya.cshtml.g.cs
+C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\obj\Debug\net5.0\Razor\Areas\Admin\Views\Dashboard\Index.cshtml.g.cs
+C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\obj\Debug\net5.0\Razor\Views\Shared\Components\GetSuggestFirendList\Default.cshtml.g.cs
+C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\obj\Debug\net5.0\Razor\Views\Friend\Index.cshtml.g.cs
+C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\obj\Debug\net5.0\Razor\Views\Friend\UserFriendBlogs.cshtml.g.cs
+C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\obj\Debug\net5.0\Razor\Views\Shared\Components\GetFriendBlogs\Default.cshtml.g.cs
+C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\obj\Debug\net5.0\Razor\Views\Friend\SendMessage.cshtml.g.cs

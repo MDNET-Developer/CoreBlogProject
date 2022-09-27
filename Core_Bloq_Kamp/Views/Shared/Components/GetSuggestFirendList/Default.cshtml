@@ -1,0 +1,26 @@
+﻿@using EntityLayer.Concrete
+@model List<Friend>
+
+<li class="dropdown head-dpdn">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-user"></i><span class="badge blue1">2</span></a>
+    <ul class="dropdown-menu">
+        <li>
+            <div class="notification_header">
+                <h3>Sizin 2 dostluq istəyiniz  var</h3>
+            </div>
+        </li>
+        <li>
+            <table class="table table-borderless table-hover">
+                <thead>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <th scope="col">@item.Gonderen</th>
+                            <th scope="col"><a href="#"><img style="width:0.9cm;height:auto;" src="~/IconsWeb/Qebulet.png" /></a></th>
+                            <th scope="col"><a href="#"><img style="width:0.9cm;height:auto" src="~/IconsWeb/Levget.png" /></a></th>
+                        </tr>
+                    }
+            </table>
+        </li>
+    </ul>
+</li>

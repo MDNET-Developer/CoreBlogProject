@@ -10,5 +10,8 @@ namespace BusinessLayer.Abstract
     public interface IWriterService:IGenericService<Writer>
     {
         List<Writer> GetWriterAccountByID(int id);
+
+        List<Writer> GetWiterbyFriend(string p);
+
     }
 }

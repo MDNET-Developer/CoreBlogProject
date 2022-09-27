@@ -9,8 +9,9 @@ using X.PagedList;
 
 namespace Core_Bloq_Kamp.Areas.Admin.Controllers
 {
-    [AllowAnonymous]
+
     [Area("Admin")]
+    [AllowAnonymous]
     public class CategoryController : Controller
     {
         CategoryManager categoryManager = new CategoryManager(new EfCategoryRepository());

@@ -1,0 +1,32 @@
+﻿@using EntityLayer.Concrete
+@model List<Friend>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
+}
+            <table class="table table-borderd table-hover">
+                <thead>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            
+                <th scope="col">
+                    @if (item.Gonderen == ViewBag.v1)
+                    {
+                        <a href="/Friend/UserFriendBlogs/@item.Alan"> @item.Alan</a>
+                       
+                    }
+                    else{
+                        <a href="/Friend/UserFriendBlogs/@item.Gonderen">@item.Gonderen</a>
+       
+                    }
+                    </th>
+                
+                            <th scope="col"><a href="#"><img style="width:0.9cm;height:auto;" src="~/IconsWeb/Qebulet.png" /></a></th>
+                            <th scope="col"><a href="#"><img style="width:0.9cm;height:auto" src="~/IconsWeb/Levget.png" /></a></th>
+                        </tr>
+                    }
+            </table>
+
+
+

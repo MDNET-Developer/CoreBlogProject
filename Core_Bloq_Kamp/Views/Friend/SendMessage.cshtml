@@ -1,0 +1,28 @@
+﻿@using EntityLayer.Concrete
+@model List<Writer>
+@{
+    ViewData["Title"] = "SendMessage";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
+}
+
+<h1>Mesaj göndər</h1>
+<hr />
+<form method="post">
+    @foreach (var item in Model)
+    {
+        <h4>Alıcı</h4>
+        <input class="form-control" name="Receiver" type="text" value="  @item.WriterMail" />
+        <br />
+    }
+    <h4>Göndərici</h4>
+    <input class="form-control" name="Sender" type="text" value="@ViewBag.sender" />
+    <br />
+    <h4>Məzmun</h4>
+    <textarea rows="7" cols="50" class="form-control" name="MessageDetails" type="text"></textarea>
+    <br />
+    <button class="btn btn-warning">Göndər</button>
+
+</form>
+
+
+

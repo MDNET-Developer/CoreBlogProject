@@ -23,6 +23,6 @@ namespace DataAccessLayer.Concrete
         public DbSet<NewsLetter> NewsLetters { get; set; }
         public DbSet<Notifcation> Notifcations { get; set; }
         public DbSet<Message> Messages { get; set; }
-
+        public DbSet<Friend> Friends { get; set; }
     }
 }
