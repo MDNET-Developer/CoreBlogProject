@@ -4,29 +4,30 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_WriterLayout.cshtml";
 }
-            <table class="table table-borderd table-hover">
-                <thead>
-                    @foreach (var item in Model)
-                    {
-                        <tr>
-                            
+<table class="table table-bordered table-hover">
+    <thead>
+        @foreach (var item in Model)
+        {
+            <tr>
+                
                 <th scope="col">
+                    <img src="~/IconsWeb/friendlogo_50px.png" />
                     @if (item.Gonderen == ViewBag.v1)
                     {
                         <a href="/Friend/UserFriendBlogs/@item.Alan"> @item.Alan</a>
-                       
+
                     }
-                    else{
+                    else
+                    {
                         <a href="/Friend/UserFriendBlogs/@item.Gonderen">@item.Gonderen</a>
-       
+
                     }
-                    </th>
-                
-                            <th scope="col"><a href="#"><img style="width:0.9cm;height:auto;" src="~/IconsWeb/Qebulet.png" /></a></th>
-                            <th scope="col"><a href="#"><img style="width:0.9cm;height:auto" src="~/IconsWeb/Levget.png" /></a></th>
-                        </tr>
-                    }
-            </table>
+                </th>
+
+                <th scope="col"><a href="#"><img src="~/IconsWeb/Levget.png" /></a></th>
+            </tr>
+        }
+</table>
 
 
 
