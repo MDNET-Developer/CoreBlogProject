@@ -16,7 +16,11 @@
                     {
                         <tr>
                             <th scope="col">@item.Gonderen</th>
-                            <th scope="col"><a href="#"><img style="width:0.9cm;height:auto;" src="~/IconsWeb/Qebulet.png" /></a></th>
+                            @*@using (Html.BeginForm("AcceptFriend","Friend",FormMethod.Post)){*@
+                                <th scope="col"><a href="/Friend/AcceptFriend/@item.DostluqID"><img style="width:0.9cm;height:auto;" src="~/IconsWeb/Qebulet.png" /></a></th>
+
+                            @*}*@
+                            
                             <th scope="col"><a href="#"><img style="width:0.9cm;height:auto" src="~/IconsWeb/Levget.png" /></a></th>
                         </tr>
                     }

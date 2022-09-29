@@ -41,6 +41,14 @@ namespace Core_Bloq_Kamp.Controllers
             messageManager.TAdd(m);
             return RedirectToAction("Index","Message");
         }
+        [HttpPost]
+        public IActionResult AcceptFriend(Friend f)
+        {
+            FriendManager friendManager = new FriendManager(new EfFriendRepository());
+            f.Veziyyet = true;
+            friendManager.TUpdate(f);
+            return RedirectToAction("Index","Friend");
+        }
 
     }
 }
