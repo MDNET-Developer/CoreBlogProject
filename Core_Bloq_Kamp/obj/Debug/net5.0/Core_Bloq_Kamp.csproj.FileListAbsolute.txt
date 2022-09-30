@@ -355,3 +355,8 @@ C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\obj\Debug\net5.0\Razor\Vi
 C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\obj\Debug\net5.0\Razor\Views\Friend\UserFriendBlogs.cshtml.g.cs
 C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\obj\Debug\net5.0\Razor\Views\Shared\Components\GetFriendBlogs\Default.cshtml.g.cs
 C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\obj\Debug\net5.0\Razor\Views\Friend\SendMessage.cshtml.g.cs
+C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Murad\Downloads\Core_Bloq_Kamp\Core_Bloq_Kamp\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
