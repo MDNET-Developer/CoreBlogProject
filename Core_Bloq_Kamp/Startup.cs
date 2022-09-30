@@ -1,9 +1,12 @@
+using DataAccessLayer.Concrete;
+using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc.Authorization;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -27,6 +30,12 @@ namespace Core_Bloq_Kamp
         //Umumi proyekt seviyyesinden otorayz islerini edirik
         public void ConfigureServices(IServiceCollection services)
         {
+            //Identity qeydiyyati ucun konfuqrasiyalar
+            services.AddDbContext<DbContext>();
+            services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>();
+          //---------------------------------------------------------------------------------------
+
+
             services.AddControllersWithViews();
             services.AddMvc(config =>
             {
